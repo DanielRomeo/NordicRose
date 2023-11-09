@@ -1,0 +1,52 @@
+.Footer{
+    background-color: black;
+    color: white;
+
+    .Carousel{
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .TextCarousel {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // display: inline-block;
+            animation: marquee 50s linear infinite; /* Adjust the duration as needed */
+            p{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .MainContainer{
+        color: white;
+        // display: flex;
+        // justify-content: center;
+
+        *{text-align: center;}
+
+        .LinkRow{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            p{
+                margin: 20px;
+            }
+        }
+        .RightsRow{
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

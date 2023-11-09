@@ -1,0 +1,42 @@
+
+
+.Container{
+    max-width:  800px;
+    margin: 0 auto;
+
+    .HomeImageRow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1,p {
+            text-align: center; 
+        }
+
+        .hr{
+            margin-top: 20px;
+            text-align: center;
+            max-width: 400px;
+            height: 10px;
+        }
+    }
+
+    .ArticleHeader{
+        h3{
+            text-align: center;
+        }
+    }
+
+
+    .AllArticlesRow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ArticlesCol{
+            // border: 1px solid black;
+            text-align: center;
+        }
+       
+    }
+}
