@@ -8,6 +8,7 @@ import Footer from '../Components/Footer'
 import AuthorComponent from '../Components/AuthorComponent'
 import Styles from '../Styles/Article.module.scss'
 import ReadNext from '../Components/ReadNext'
+import ActualArticleComponent from '../Components/ActualArticleComponent'
 
 // axios.defaults.xsrfCookieName = 'csrftoken';
 // axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -33,6 +34,11 @@ return (
 					alt="Picture of the author"
 				/>
 			</div>
+
+			<hr />
+
+			{/* Actual Article */}
+			<ActualArticleComponent></ActualArticleComponent>
 				
 
 			<Container className={Styles.Container}>

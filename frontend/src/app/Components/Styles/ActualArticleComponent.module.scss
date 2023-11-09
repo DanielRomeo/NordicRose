@@ -1,0 +1,41 @@
+.Container{
+    max-width: 800px;
+
+    .ReadDetails{
+        margin-bottom: 30px;
+
+        .MainRow{
+            .ContentCol{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+            }
+
+            .buttonCol{
+                display: flex;
+                justify-content: right ;
+                align-items: center;
+
+                button{
+                    background-color: grey;
+                    border: grey;
+                }
+
+                .Facebookbutton{
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                .Twitterbutton{
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+        }
+    }
+    .Read{
+        p{
+            font-size: 20px;
+        }
+    }
+}
