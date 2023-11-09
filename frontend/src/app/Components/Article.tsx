@@ -1,11 +1,12 @@
 'use client'
 import { ReactNode } from "react";
 import Image from 'next/image'
+import Styles from './Styles/Article.module.scss'
 
 
 const Article = (): ReactNode=>{
     return (
-        <div>
+        <div className={Styles.MainDiv}>
             <Image
                 src="/rectangle.png"
                 width={300}

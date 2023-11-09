@@ -1,0 +1,28 @@
+.MainContainer2{
+        // border: 1px solid yellow;
+        max-width: 1000px;
+        margin-bottom: 100px;
+        
+    .HeaderRow{
+        h1{
+            text-align: center;
+        }
+    }
+
+    .ContentRow{
+
+        .ArticlesCol{
+            display: flex;
+            justify-content: center;
+
+            *{
+                text-align: center;
+            }
+        }
+    }
+
+    .NewsletterRow{
+        display: flex;
+        justify-content: center;
+    }
+}

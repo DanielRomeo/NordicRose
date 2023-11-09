@@ -1,0 +1,36 @@
+.MainDiv{
+    border: 1px solid black;
+    border-top: 10px solid black;
+    padding: 40px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+
+    h1,p{
+        text-align: center;
+    }
+
+    .inputGroup{
+
+        .input{
+            border: 1px solid black;
+            border-radius: 0px;
+
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        
+
+        .button{
+            // color: green;
+            border-radius: 0px;
+            background-color: black;
+        }
+    }
+
+    
+}

@@ -1,4 +1,27 @@
+.HeaderContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
+    h1,p{
+        text-align: center;
+    }
+
+}
+
+.ImageContainer{
+    width: 100%;    
+    overflow: hidden;
+
+    .Image{
+        width: 100%;
+        height: auto;
+        display: block; 
+    }
+}
 .Container{
     max-width:  800px;
     margin: 0 auto;
