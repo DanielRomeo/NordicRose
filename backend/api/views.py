@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 
 # after creating the serialzer, we now import the Blog model and the serializers
-from blog.models import Item
+from blog.models import Item 
 from .serializers import ItemSerialzer
 
 # api view dec

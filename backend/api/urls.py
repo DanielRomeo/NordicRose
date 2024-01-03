@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.getBlogs)
+    path('getblogs', views.getBlogs),
+    path('gedata', views.getData)
 ]
