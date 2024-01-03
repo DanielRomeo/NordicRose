@@ -3,5 +3,9 @@ from . import views
 
 urlpatterns = [
     path('getblogs', views.getBlogs),
-    path('gedata', views.getData)
+    path('gedata', views.getData),
+
+    path('adddata', views.addItem)
+
+    
 ]

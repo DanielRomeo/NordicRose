@@ -22,3 +22,10 @@ def getBlogs(request):
     items = Item.objects.all()
     serializer = ItemSerialzer(items, many=True) # its true because we wanna return alot, if it were one, it would be false
     return Response(serializer.data)
+
+@api_view(['POST'])
+def addblog(request):
+    serializer = ItemSerialzer(data = request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
