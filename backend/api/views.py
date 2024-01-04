@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 
 # after creating the serialzer, we now import the Blog model and the serializers
-from blog.models import Item 
-from .serializers import ItemSerialzer
+from blog.models import Author, Blogpost 
+from .serializers import AuthorSerializer, BlogpostSerializer
 
 # api view dec
 # @csrf_exempt
@@ -19,13 +19,13 @@ def getData(request):
 
 @api_view(['GET'])
 def getBlogs(request):
-    items = Item.objects.all()
-    serializer = ItemSerialzer(items, many=True) # its true because we wanna return alot, if it were one, it would be false
+    items = Blogpost.objects.all()
+    serializer = BlogpostSerializer(items, many=True) # its true because we wanna return alot, if it were one, it would be false
     return Response(serializer.data)
 
-@api_view(['POST'])
-def addblog(request):
-    serializer = ItemSerialzer(data = request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
+# @api_view(['POST'])
+# def addblog(request):
+#     serializer = ItemSerialzer(data = request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#     return Response(serializer.data)
