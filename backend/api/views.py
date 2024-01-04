@@ -2,6 +2,7 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 # after creating the serialzer, we now import the Blog model and the serializers
 from blog.models import Author, Blogpost 
@@ -22,6 +23,17 @@ def getBlogs(request):
     items = Blogpost.objects.all()
     serializer = BlogpostSerializer(items, many=True) # its true because we wanna return alot, if it were one, it would be false
     return Response(serializer.data)
+
+@api_view(['GET'])
+def getBlog(request, blogpost_id):
+    item = Blogpost.objects.get(id=blogpost_id)
+    response = json.dumps([{
+        'title': item.title,
+        'description' : item.description,
+        'created' : item.created,
+        'image': item.image,
+        'author': item.author
+        }])
 
 # @api_view(['POST'])
 # def addblog(request):
