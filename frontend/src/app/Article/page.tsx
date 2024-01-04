@@ -30,16 +30,20 @@ return (
 					className={Styles.Image}
 					src="/NordicHomeImage.png"
 					width={800}
-					height={800}
+					height={500}
 					alt="Picture of the author"
 				/>
 			</div>
 
-			<hr />
+			
+			
 
 			{/* Actual Article */}
 			<ActualArticleComponent></ActualArticleComponent>
 				
+			<hr />
+			{/* <br style={{marginTop: '100px'}}/> */}
+			
 
 			<Container className={Styles.Container}>
 				<AuthorComponent></AuthorComponent>

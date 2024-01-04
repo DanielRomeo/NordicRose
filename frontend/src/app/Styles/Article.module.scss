@@ -12,14 +12,16 @@
 }
 
 .ImageContainer{
-    width: 100%;    
-    overflow: hidden;
-    margin-bottom: 30px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
 
     .Image{
-        width: 100%;
-        height: auto;
-        display: block; 
+        // width: 100%;
+        // height: auto;
+        // display: block; 
+        
     }
 }
 .Container{

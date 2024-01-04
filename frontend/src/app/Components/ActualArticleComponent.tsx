@@ -4,7 +4,6 @@ import {Container, Row, Col, Navbar, Button, Form, Nav, NavDropdown} from 'react
 import Image from 'next/image'
 import Styles from './Styles/ActualArticleComponent.module.scss'
 import { BsFacebook, BsTwitter } from "react-icons/bs";
-import { FaBeer } from "react-icons/fa";
 
 
 const AuthorComponent = (): ReactNode=> {
@@ -16,10 +15,13 @@ const AuthorComponent = (): ReactNode=> {
 
     return (
         <Container className={Styles.Container}>
+
+            <hr  className={Styles.hr}/>
+
             <div className={Styles.ReadDetails}>
                 <Row className={Styles.MainRow}>
-                    <Col className={Styles.ContentCol} style={{border: '1px solid purple'}} lg={7} md={7} sm={12}>
-                        <Col style={{border: '1px solid green'}} lg={3} md={3} >
+                    <Col className={Styles.ContentCol} style={{}} lg={7} md={7} sm={12}>
+                        <Col style={{}} lg={3} md={3} >
                             <Image
                                 src="/thumbnail.png"
                                 width={100}
@@ -38,7 +40,7 @@ const AuthorComponent = (): ReactNode=> {
                         </Col>
                     </Col>
 
-                    <Col className={Styles.buttonCol} style={{border: '1px solid purple'}} lg={5} md={5} sm={12}>
+                    <Col className={Styles.buttonCol} style={{}} lg={5} md={5} sm={12}>
                        
                        
                             <Button className={Styles.Facebookbutton}><BsFacebook size={40}></BsFacebook></Button>

@@ -13,6 +13,9 @@ const AuthorComponent = (): ReactNode=> {
 
     return (
         <Row className={Styles.MainRow}>
+
+            {/* <hr style={{marginTop: '40px'}}/> */}
+
             <Col lg={4} md={4} sm={5}>
                 <div>
                     <Image

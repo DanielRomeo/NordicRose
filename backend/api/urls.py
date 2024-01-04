@@ -5,7 +5,7 @@ urlpatterns = [
     path('getblogs', views.getBlogs),
     path('gedata', views.getData),
 
-    path('adddata', views.addItem)
+    path('addblog', views.addblog)
 
     
 ]

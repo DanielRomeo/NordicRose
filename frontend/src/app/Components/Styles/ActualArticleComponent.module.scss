@@ -1,5 +1,12 @@
 .Container{
+    margin-top: 50px;
     max-width: 800px;
+
+    .hr{
+        color: black;
+        // height: 5px;
+        // size: 5;
+    }
 
     .ReadDetails{
         margin-bottom: 30px;
@@ -25,10 +32,19 @@
                 .Facebookbutton{
                     border-top-right-radius: 0px;
                     border-bottom-right-radius: 0px;
+                    color: black;
+                    background-color: white;
+                    border: 1px solid  #e9e5e5 ;
+                    box-shadow: 1px 1px #e9e5e5;
                 }
                 .Twitterbutton{
                     border-top-left-radius: 0px;
                     border-bottom-left-radius: 0px;
+                    color: black;
+                    background-color: white;
+                    border: 1px solid  #e9e5e5 ;
+                    border-left: none;
+                    box-shadow: 0.5px 1px #e9e5e5;
                 }
             }
         }
