@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.http import HttpResponse # http response
 
 # after creating the serialzer, we now import the Blog model and the serializers
 from blog.models import Author, Blogpost 
@@ -25,19 +26,22 @@ def getBlogs(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-def getBlog(request, blogpost_id):
-    item = Blogpost.objects.get(id=blogpost_id)
-    response = json.dumps([{
-        'title': item.title,
-        'description' : item.description,
-        'created' : item.created,
-        'image': item.image,
-        'author': item.author
-        }])
+def getBlog(request, id):
+    item = Blogpost.objects.get(pk=id)
+    # response = json.dumps({
+    #     'title': item.title,
+    #     'description' : item.description,
+    #     'created' : item.created,
+    #     'image': item.image,
+    #     'author': item.author
+    #     }, indent=4, sort_keys=True, default=str)
+    # return HttpResponse(response, content_type='text/json')
+    serializer = BlogpostSerializer(item, many=False)
+    return Response(serializer.data)
 
-# @api_view(['POST'])
-# def addblog(request):
-#     serializer = ItemSerialzer(data = request.data)
-#     if serializer.is_valid():
-#         serializer.save()
-#     return Response(serializer.data)
+@api_view(['GET'])
+def getAuthor(request, id):
+    item = Author.objects.get(pk=id)
+    serializer = AuthorSerializer(item, many=False)
+    return Response(serializer.data)
+
