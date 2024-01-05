@@ -1,19 +1,26 @@
 'use client'
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import Image from 'next/image'
 import Styles from './Styles/Article.module.scss'
 
 
-const Article = (): ReactNode=>{
+type myPropsType ={
+    blogTitle: string,
+    blogImage: string
+}
+
+
+const Article = ({children, blogTitle, blogImage}: PropsWithChildren<myPropsType>): ReactNode => {
     return (
         <div className={Styles.MainDiv}>
             <Image
-                src="/rectangle.png"
+                src={`http://localhost:8000${blogImage}`}
+                // src='../../'
                 width={300}
                 height={200}
                 alt="Picture of the author"
             />
-            <p>Here are some things you should know regarding how we work </p>
+            <p>{blogTitle}</p>
         </div>
     )
 }
