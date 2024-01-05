@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import {Container, Row, Col, Navbar, Button, Form, Nav, NavDropdown} from 'react-bootstrap'
@@ -55,13 +56,16 @@ export default function Home() {
 					{
 						articles !== null ? articles.map((article: any)=>(
 							
-							<Col className={`${Styles.ArticlesCol}`} lg={6} md={6} sm={12}>
-								<Article blogImage={article.image} blogTitle={article.title}></Article>
+							<Col  key={article.id} className={`${Styles.ArticlesCol}`} lg={6} md={6} sm={12}>
+								<Link href="Article">
+								<Article   blogImage={article.image} blogTitle={article.title}></Article>
+								</Link>
+								
 							</Col>
 						))
 						: (
 							<div>
-								Empty
+								No blog posts as of yet! STAY TUNED!
 							</div>
 						)
 					}

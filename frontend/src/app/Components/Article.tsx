@@ -14,8 +14,7 @@ const Article = ({children, blogTitle, blogImage}: PropsWithChildren<myPropsType
     return (
         <div className={Styles.MainDiv}>
             <Image
-                src={`http://localhost:8000${blogImage}`}
-                // src='../../'
+                src={`/http://localhost:8000${blogImage}`}
                 width={300}
                 height={200}
                 alt="Picture of the author"
