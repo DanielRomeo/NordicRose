@@ -11,10 +11,12 @@ type myPropsType ={
 
 
 const Article = ({children, blogTitle, blogImage}: PropsWithChildren<myPropsType>): ReactNode => {
+
+    const url = `http://localhost:8000/${blogImage}`
     return (
         <div className={Styles.MainDiv}>
             <Image
-                src={`http://localhost:8000${blogImage}`}
+                src={url}
                 width={300}
                 height={200}
                 alt="Picture of the author"

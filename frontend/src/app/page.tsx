@@ -57,7 +57,7 @@ export default function Home() {
 						articles !== null ? articles.map((article: any)=>(
 							
 							<Col  key={article.id} className={`${Styles.ArticlesCol}`} lg={6} md={6} sm={12}>
-								<Link href="Article">
+								<Link href={`/Article/1`}>
 								<Article   blogImage={article.image} blogTitle={article.title}></Article>
 								</Link>
 								
