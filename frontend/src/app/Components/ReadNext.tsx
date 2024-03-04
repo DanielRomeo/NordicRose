@@ -11,7 +11,7 @@ const ReadNext = (): ReactNode=> {
 
     return (
         <Container className={`${Styles.MainContainer2} fluid`}>
-            <Row className={Styles.HeaderRow}>
+            {/* <Row className={Styles.HeaderRow}>
                 <h1>What to read next</h1>
             </Row>
 
@@ -38,7 +38,7 @@ const ReadNext = (): ReactNode=> {
 
             <Row className={Styles.NewsletterRow}>
                 <NewsletterComponent></NewsletterComponent>
-            </Row>
+            </Row> */}
         </Container>
     )
 }
