@@ -25,13 +25,15 @@ SECRET_KEY = 'django-insecure-3^ux5j10t_*ps6*jwu%0&xp6w1f_p-dd-ot*19w4o2)6u*h@r3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nordicrose.onrender.com']
 
 CORS_ALLOWED_ORIGINS = [
     "https://example.com",
     "https://sub.example.com",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "nordicrose.onrender.com"
+    
 ]
 CORS_ALLOW_CREDENTIALS = True
 # REST_FRAMEWORK = {
