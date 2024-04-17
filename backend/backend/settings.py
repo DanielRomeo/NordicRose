@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-3^ux5j10t_*ps6*jwu%0&xp6w1f_p-dd-ot*19w4o2)6u*h@r3
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://nordicrose.onrender.com',
+                 'nordicrose.onrender.com',
                  "localhost"]
 
 CORS_ALLOWED_ORIGINS = [
