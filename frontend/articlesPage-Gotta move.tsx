@@ -3,12 +3,12 @@ import Image from 'next/image'
 import {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import {Container, Navbar, Button, Form, Nav, NavDropdown} from 'react-bootstrap'
-import MainNavbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
-import AuthorComponent from '../Components/AuthorComponent'
+import MainNavbar from './src/app/Components/Navbar'
+import Footer from './src/app/Components/Footer'
+import AuthorComponent from './src/app/Components/AuthorComponent'
 import Styles from '../Styles/Article.module.scss'
-import ReadNext from '../Components/ReadNext'
-import ActualArticleComponent from '../Components/ActualArticleComponent'
+import ReadNext from './src/app/Components/ReadNext'
+import ActualArticleComponent from './src/app/Components/ActualArticleComponent'
 
 // axios.defaults.xsrfCookieName = 'csrftoken';
 // axios.defaults.xsrfHeaderName = 'X-CSRFToken';
