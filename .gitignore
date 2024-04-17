@@ -1,0 +1,7 @@
+*.css
+*.js
+*.jpg
+*.png
+*.gif
+/static/ 
+/staticfiles/
