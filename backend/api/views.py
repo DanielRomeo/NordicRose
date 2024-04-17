@@ -19,12 +19,14 @@ def getData(request):
     }
     return Response(person)
 
+# works
 @api_view(['GET'])
 def getBlogs(request):
     items = Blogpost.objects.all()
     serializer = BlogpostSerializer(items, many=True) # its true because we wanna return alot, if it were one, it would be false
     return Response(serializer.data)
 
+# works
 @api_view(['GET'])
 def getBlog(request, id):
     item = Blogpost.objects.get(pk=id)
@@ -39,6 +41,7 @@ def getBlog(request, id):
     serializer = BlogpostSerializer(item, many=False)
     return Response(serializer.data)
 
+# works
 @api_view(['GET'])
 def getAuthor(request, id):
     item = Author.objects.get(pk=id)
