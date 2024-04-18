@@ -11,7 +11,6 @@ import Styles from '../../Styles/Article.module.scss'
 import ReadNext from '../../Components/ReadNext'
 import ActualArticleComponent from '../../Components/ActualArticleComponent'
 
-
 // axios.defaults.xsrfCookieName = 'csrftoken';
 // axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 // axios.defaults.withCredentials = true;
@@ -50,7 +49,6 @@ const ArticlePage = ({params}: PostPageProps) => {
 			<hr />
 			{/* <br style={{marginTop: '100px'}}/> */}
 			
-
 			<Container className={Styles.Container}>
 				<AuthorComponent></AuthorComponent>
 				<hr />

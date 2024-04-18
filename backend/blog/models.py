@@ -6,8 +6,8 @@ class Author(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    facebook = models.URLField(max_length=200)
-    twitter = models.URLField(max_length=200)
+    facebook = models.URLField(blank=True, max_length=200)
+    twitter = models.URLField(blank=True, max_length=200)
     image = models.ImageField(null=True, blank=True, upload_to="authorimages/")
 
     def __str__(self) -> str:

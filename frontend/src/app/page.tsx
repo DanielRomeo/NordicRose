@@ -15,13 +15,33 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 axios.defaults.withCredentials = true;
 
 
+// //
+// export async function getStaticProps() {
+// 	const db = await myDB.connect({
+// 	  host: process.env.DB_HOST,
+// 	  username: process.env.DB_USER,
+// 	  password: process.env.DB_PASS,
+// 	})
+// 	// ...
+//   }
+
+// export const getServerSideProps  = ()=>{
+// 	console.log(process.env.NODE_ENV);
+
+// 	return{
+// 		props:{
+// 			hello: 'hello',
+// 		},
+// 	}
+// }
+
 export default function Home() {
 
 	const [articles, setArticles] = useState<[]>([]);
 
 	// use effect:
 	useEffect(()=>{
-		axios.get('http://localhost:8000/getblogs')
+		axios.get(`${process.env.NEXT_PUBLIC_SERVER}/getblogs`)
 		.then((response: any)=>{
 			console.log(response.data);
 			setArticles(response.data);
