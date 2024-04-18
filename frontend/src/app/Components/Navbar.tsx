@@ -11,10 +11,9 @@ const MainNavbar = ()=> {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home">BLOG</Nav.Link>
-            <Nav.Link href="#link">ABOUT</Nav.Link>
-            <Nav.Link href="#home">LINKS</Nav.Link>
-            <Nav.Link href="#link">PROJECTS</Nav.Link>
+          <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/articles">ARTICLES</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
