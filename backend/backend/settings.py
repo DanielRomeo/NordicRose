@@ -27,15 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['https://nordicrose.onrender.com',
                  'nordicrose.onrender.com',
+                 'https://nordic-rose-six.vercel.app/',
+                 'nodeic-rose-six.verce.app',
                  "localhost"]
 
 CORS_ALLOWED_ORIGINS = [
     "https://example.com",
     "https://sub.example.com",
     "http://localhost:3000",
-    # "http://localhost:3000/getblogs"
     "http://127.0.0.1:3000",
-    "https://nordicrose.onrender.com"
+    "https://nordicrose.onrender.com",
+    "https://nordic-rose-six.vercel.app"
     
 ]
 CORS_ALLOW_CREDENTIALS = True
